@@ -19,7 +19,14 @@ class Bookmark(models.Model):
     updated_at = models.DateTimeField('수정일시', auto_now=True)
     # 업데이트일자 = 모델.필드(자동설정)
 
+    def __str__(self):
+        return self.name
+
     class Meta:
         verbose_name = '북마크'
         verbose_name_plural = '북마크 목록'
 
+# makemigrations => migration.py 파일을 만듭니다. => 깃의 commit => github에 적용 x
+# 실제 DB에는 영향 X => 실제 DB에 넣기 위한 정의를 하는 파일을 생성. => 깃의 push > github에 적용 o
+
+# migrate => migrations/ 폴더 안에 있는 migration 파일들을 실제 DB에 적용을 합니다.
