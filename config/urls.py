@@ -69,5 +69,5 @@ urlpatterns = [
     # path('movie/', movies),
     # path('movie/<int:index>/', movie_detail),
     path('bookmark/', views.bookmark_list),
-    path('bookmark/<int:num>/', views.bookmark_detail),
+    path('bookmark/<int:pk>/', views.bookmark_detail),
 ]
